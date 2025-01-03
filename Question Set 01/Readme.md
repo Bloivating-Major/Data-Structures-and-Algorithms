@@ -1,4 +1,3 @@
-Here’s a sample README for your Assignment 1 based on the functions you provided. Feel free to adjust any details as needed:
 
 ---
 

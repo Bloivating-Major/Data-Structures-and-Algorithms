@@ -1,4 +1,3 @@
-Here’s the updated **Assignment 2 README** with the **function definitions** included for each question:
 
 ---
 
