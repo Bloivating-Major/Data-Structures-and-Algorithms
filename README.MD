@@ -12,6 +12,28 @@ The objective of this repository is to:
 - Continuously improve problem-solving skills by tackling challenges and assignments.
 - Learn efficient solutions and algorithms to solve various problems.
 
+## **CONCEPTS 📔**
+
+<details>
+<summary style="font-size: 15px; font-weight: bold; cursor: pointer;">Click to Expand: CONCEPTS 📔</summary>
+
+### **[Binary Search ✅](./Concepts/Binary%20Search/Readme.md)**
+
+</details>
+
+## **Assignments 📔**
+
+<details>
+<summary style="font-size: 15px; font-weight: bold; cursor: pointer;">Click to Expand: Assignments 📔</summary>
+
+### **[Question Set 1 ✅](./Question%20Set%2001/Readme.md)**
+### **[Question Set 2 ✅](./Question%20Set%2002/Readme.md)**
+### **[Question Set 3 ✅](./Question%20Set%2003/Readme.md)**
+### **[Question Set 4 ✅](./Question%20Set%2004/Readme.md)**
+### **[Question Set 5 ✅](./Question%20Set%2005/Readme.md)**
+
+</details>
+
 ## **Table of Contents**
 1. [Introduction to DSA](#introduction-to-dsa)
 2. [Array](#array)
