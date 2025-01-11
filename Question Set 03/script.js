@@ -58,4 +58,27 @@ function Question8(){
        console.log(`Number 1 :${num1} Number 2 :${num2}`);
 }
 
+function Question9(){
+       // swapping using bitwise operators.
+       // XOR operator ^.
+       let num1 = 5;
+       let num2 = 10;
+       console.log(`Number 1 :${num1} Number 2 :${num2}`);
+       num1 = num1 ^ num2;
+       num2 = num1 ^ num2;
+       num1 = num1 ^ num2;
+       console.log(`Number 1 :${num1} Number 2 :${num2}`);
+}
+
+
+function Question10(){
+       // swapping in 1 line arithmetic expression.
+       let num1 = 10;
+       let num2 = 20;
+       console.log(`Number 1 :${num1} Number 2 :${num2}`);
+       num1 = num1 + num2 - (num2 = num1);
+       console.log(`Number 1 :${num1} Number 2 :${num2}`);
+}
+
+Question10();
 
