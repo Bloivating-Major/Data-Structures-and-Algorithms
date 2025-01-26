@@ -46,6 +46,8 @@
 //     }
 //     console.log();
 // }
+// This is only Pirymid
+// Now we have to make it hollow.
 
 
 

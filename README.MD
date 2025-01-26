@@ -18,6 +18,7 @@ The objective of this repository is to:
 <summary style="font-size: 15px; font-weight: bold; cursor: pointer;">Click to Expand: CONCEPTS 📔</summary>
 
 ### **[Binary Search ✅](./Concepts/Binary%20Search/Readme.md)**
+### **[Conditionals and Loops ✅](./Concepts//Conditionals%20and%20Loops/Readme.md)**
 
 </details>
 
