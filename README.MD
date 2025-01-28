@@ -32,6 +32,7 @@ The objective of this repository is to:
 ### **[Question Set 3 ✅](./Question%20Set%2003/Readme.md)**
 ### **[Question Set 4 ✅](./Question%20Set%2004/Readme.md)**
 ### **[Question Set 5 ✅](./Question%20Set%2005/Readme.md)**
+### **[Question Set 6 ✅](./Question%20Set%2006/Readme.md)**
 
 </details>
 
