@@ -431,10 +431,22 @@ function Question34(){
 }
 // Question34()
 function Question35(){
-    let n = 5;
+    let num = 5;
     // i = 5 j = n * 2 - 1;
+    for(let i = 0; i < num; i++){
+        let k = 0;
+        for(let j = 0; j < num * 2 - 1; j++){
+            if(j < num - i - 1) process.stdout.write("   ");
+            else if(k < 2 * i + 1){
+                process.stdout.write(" * ");
+                k++;
+            } 
+            else process.stdout.write("   ");
+        }
+        console.log();
+    }
 }
-// Question35()
+Question35()
 function Question36(){}
 // Question01()
 function Question37(){}
