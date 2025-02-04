@@ -6,6 +6,57 @@ let num = 5;
 // FlippedSolidDiamond(num);
 // NumberStarPattern(num);
 // AlphPalindromePyramid(num);
+// NumericFullPyramid(num);
+// HollowNumericPyramid(num);
+
+function HollowNumericPyramid(num){
+    for(let i = 0; i < num; i++){
+        let start = 1;
+        // Spaces
+        for(let j = 0; j < num - i -1; j++){
+            process.stdout.write('  ');
+        }
+        // Number
+        for(let j = 0; j < 2 * i +1; j++){
+            if(i == 0 || i == num -1){
+                if(j % 2 == 0){
+                    process.stdout.write(` ${start}`)
+                    start = start + 1;
+                }
+                else process.stdout.write('  ');
+            }
+            else{
+                if(j == 0){
+                process.stdout.write(` 1`);
+                }else if(j == 2 * i){
+                process.stdout.write(` ${i+1}`);
+                }else{
+                    process.stdout.write('  ');
+                }
+            }
+        }
+        // New Line
+        console.log();
+    }
+}
+
+function NumericFullPyramid(num){
+    for(let i = 0; i < num; i++){
+        // Spaces
+        for(let j = 0; j < num-i; j++){
+            process.stdout.write('  ');
+        }
+        // Number
+        for(let j = 0; j <= i; j++){
+            process.stdout.write(`${i+1+j} `)
+        }
+        // Reverse Number
+        for(let j = 0; j < i; j++){
+            process.stdout.write(`${i*2-j} `)
+        }
+        console.log();
+    }
+}
 
 function AlphPalindromePyramid(num){
     for(let i = 0; i < num; i++){
