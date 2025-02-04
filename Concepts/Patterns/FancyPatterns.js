@@ -1,4 +1,4 @@
-let num = 9;
+let num = 5;
 
 // HollowNumericHalfPyramid(num);
 // HollowInvertedNumericHalfPyramid(num);
