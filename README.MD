@@ -22,6 +22,7 @@ The objective of this repository is to:
 
 ### **[Binary Search ✅](./Concepts/Binary%20Search/Readme.md)**
 ### **[Conditionals and Loops ✅](./Concepts//Conditionals%20and%20Loops/Readme.md)**
+### **[Patterns ✅](./Concepts/Patterns/Readme.md)**
 
 </details>
 
