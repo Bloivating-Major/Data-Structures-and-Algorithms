@@ -1,174 +1,214 @@
+## 📌 **Assignment 7 Solutions**
+  
+This assignment consists of **basic loops and number operations** in JavaScript. Below is a detailed breakdown of each question with explanations.
 
 ---
 
-# **JavaScript Assignment 6** 🎯  
-### Mastering Conditionals and Logical Thinking 🤔
-
----
-
-## **Questions Overview** 📚
-
-### **1️⃣ Check for a 3-Digit Number**
-Check if a given number is a three-digit number.  
-**Code Snippet**:
+### ✅ **Question 1: Print "Sambhav" 5 times**
 ```javascript
 function Question1() {
-    let num = 333;
-    if (num >= 100 && num <= 999) console.log(num, "is a 3 Digit Number");
+  let num = 5;
+  for (let i = 0; i < num; i++) {
+    console.log("Sambhav");
+  }
 }
 ```
+✔ **Explanation:**  
+- Uses a **for loop** to iterate 5 times.
+- Prints `"Sambhav"` on each iteration.
 
 ---
 
-### **2️⃣ Profit or Loss Calculator** 💹  
-Calculate profit, loss, and their respective percentages for given cost price (CP) and selling price (SP).  
-**Code Snippet**:
+### ✅ **Question 2: Print numbers from 1 to 10**
 ```javascript
 function Question2() {
-    let cp = 100, sp = 150;
-    if (sp > cp) {
-        const profit = sp - cp;
-        const profitPercentage = (profit / cp) * 100;
-        console.log(`Profit of ${profit}`);
-        console.log(`Profit Percentage of ${profitPercentage.toFixed(2)}%`);
-    } else if (sp < cp) {
-        const loss = cp - sp;
-        const lossPercentage = (loss / cp) * 100;
-        console.log(`Loss of ${loss}`);
-        console.log(`Loss Percentage of ${lossPercentage.toFixed(2)}%`);
-    } else {
-        console.log("No profit, no loss.");
-    }
+  let num = 10;
+  for (let i = 1; i <= num; i++) {
+    console.log(i);
+  }
 }
 ```
+✔ **Explanation:**  
+- Loop runs from `1 to 10`.
+- Prints each number sequentially.
 
 ---
 
-### **3️⃣ Student Pass/Fail Checker** 🎓  
-Determine if a student has passed based on marks in 5 subjects.  
-**Code Snippet**:
+### ✅ **Question 3: Print numbers from 10 to 1 (Reverse Order)**
 ```javascript
 function Question3() {
-    let s1 = 55, s2 = 64, s3 = 75, s4 = 56, s5 = 55;
-    if (s1 >= 33 && s2 >= 33 && s3 >= 33 && s4 >= 33 && s5 >= 33) {
-        console.log("Passed");
-    } else {
-        console.log("Failed");
+    let num = 10;
+    for(let i = num; i >= 1; i--){
+        console.log(i);
     }
 }
 ```
+✔ **Explanation:**  
+- Starts from `10` and decrements till `1`.  
 
 ---
 
-### **4️⃣ Check Case of Alphabet** 🔤  
-Check whether an alphabet is in uppercase or lowercase.  
-**Code Snippet**:
+### ✅ **Question 4: Print first 10 odd numbers**
 ```javascript
 function Question4() {
-    let alphabet = "D";
-    if (alphabet >= 'a' && alphabet <= 'z') console.log(alphabet + " is in Lowercase");
-    else if (alphabet >= 'A' && alphabet <= 'Z') console.log(alphabet + " is in Uppercase");
-    else console.log("Not an alphabet");
+    let count = 0;
+    let num = 1;
+    while(count < 10){
+        if(num % 2 != 0){
+            console.log(num);
+            count++;
+        }
+        num++;
+    }
+}
+```
+✔ **Explanation:**  
+- Uses `while loop` to track **10 odd numbers**.
+- If a number is **odd**, prints it and increments `count`.
+
+📝 **Alternate (Using For Loop)**
+```javascript
+function Question4_Alt() {
+  for(let i = 1, count = 0; count < 10; i+=2){
+    console.log(i);
+    count++;
+  }
 }
 ```
 
 ---
 
-### **5️⃣ Divisibility Check (2 and 3)**  
-Check if a number is divisible by both 2 and 3.  
-**Code Snippet**:
+### ✅ **Question 5: Print first 10 odd numbers in reverse order**
 ```javascript
 function Question5() {
-    let num = 6;
-    if (num % 2 == 0 && num % 3 == 0) console.log(num + " is divisible by 2 and 3");
-    else console.log(num + " is not divisible by 2 and 3");
+  let i = 10;
+  while(i >= 1){
+    console.log(2 * i - 1);
+    i--;
+  }
 }
 ```
+✔ **Explanation:**  
+- Uses `while loop` starting from `10`.
+- Formula `2*i - 1` generates odd numbers in reverse order.
 
 ---
 
-### **6️⃣ Divisibility Check (7 or 3)**  
-Check if a number is divisible by 7 or 3.  
-**Code Snippet**:
+### ✅ **Question 6: Print first 10 even numbers**
 ```javascript
 function Question6() {
-    let num = 2;
-    if (num % 7 == 0 || num % 3 == 0) console.log(num + " is divisible by 7 or 3");
-    else console.log(num + " is not divisible by 7 or 3");
+  let count = 0;
+  let num = 1;
+  while(count < 10){
+    if(num % 2 == 0){
+      console.log(num);
+      count++;
+    }
+    num++;
+  }
+}
+```
+✔ **Explanation:**  
+- Uses `while loop` to track **10 even numbers**.
+- If a number is **even**, prints it and increments `count`.
+
+📝 **Alternate (Using For Loop)**
+```javascript
+function Question6_Alt() {
+  for(let i = 2, count = 0; count < 10; i+=2){
+    console.log(i);
+    count++;
+  }
 }
 ```
 
 ---
 
-### **7️⃣ Positive, Negative, or Zero** ➕➖  
-Check whether a number is positive, negative, or zero.  
-**Code Snippet**:
+### ✅ **Question 7: Print first 10 even numbers in reverse order**
 ```javascript
 function Question7() {
-    let num = 55;
-    if (num > 0) console.log(`${num} is Positive`);
-    else if (num < 0) console.log(`${num} is Negative`);
-    else console.log(`${num} is Zero`);
+  let i = 20;
+  while(i >= 2){
+    console.log(i);
+    i = i - 2;
+  }
 }
 ```
+✔ **Explanation:**  
+- Starts from `20` (10th even number) and decrements by `2` till `2`.
 
 ---
 
-### **8️⃣ Character Type Identifier** ✍️  
-Determine if the given input is an uppercase/lowercase letter, digit, or special character.  
-**Code Snippet**:
+### ✅ **Question 8: Print squares of first 10 natural numbers**
 ```javascript
 function Question8() {
-    let input = "%";
-    let code = input.charCodeAt(0);
-    if (code >= 48 && code <= 57) console.log(`Given input is a Digit ${input}`);
-    else if (code >= 65 && code <= 90) console.log(`Given input is an Uppercase Character ${input}`);
-    else if (code >= 97 && code <= 122) console.log(`Given input is a Lowercase Character ${input}`);
-    else console.log(`Given input is a Special Character ${input}`);
+  let num= 10;
+  for(let i = 1; i <= num; i++){
+    console.log(i * i);
+  }
 }
 ```
+✔ **Explanation:**  
+- Uses a **for loop** to iterate from `1 to 10`.
+- Computes and prints **square** of each number.
 
 ---
 
-### **9️⃣ Triangle Validity Check** 🔺  
-Check if the given sides form a valid triangle.  
-**Code Snippet**:
+### ✅ **Question 9: Print cubes of first 10 natural numbers**
 ```javascript
 function Question9() {
-    let a = 30, b = 40, c = 50;
-    if ((a + b) > c && (a + c) > b && (b + c) > a) console.log("Given Triangle Is Valid");
-    else console.log("Given Triangle is Invalid");
+  let num= 10;
+  for(let i = 1; i <= num; i++){
+    console.log(i * i * i);
+  }
 }
 ```
+✔ **Explanation:**  
+- Similar to **Q8**, but computes **cubes** instead of squares.
 
 ---
 
-### **🔟 Days in a Month Checker** 📅  
-Determine the number of days in a given month.  
-**Code Snippet**:
+### ✅ **Question 10: Print multiplication table of 5**
 ```javascript
 function Question10() {
-    let month = 5;
-    if (month > 0 && month < 13) {
-        if (month == 2) console.log(`${month} Month has 28 or 29 days`);
-        else if (month == 4 || month == 6 || month == 9 || month == 11) console.log(`${month} has 30 days`);
-        else console.log(`${month} has 31 Days`);
-    } else console.log("Invalid Month");
+  let num = 5;
+  for(let i = 1; i <= 10; i++){
+    console.log(num * i);
+  }
 }
+```
+✔ **Explanation:**  
+- Uses **for loop** to print multiples of `5`.
+
+📝 **Generalized Version (for any number `n`)**
+```javascript
+function printTable(n) {
+  for(let i = 1; i <= 10; i++){
+    console.log(`${n} x ${i} = ${n * i}`);
+  }
+}
+printTable(7);  // Example for number 7
 ```
 
 ---
 
-## 🚀 **Execution**  
-To execute any question, uncomment the corresponding function call, e.g., `Question1()` and run the script in a Node.js environment or browser console.
+## 🎯 **Summary Table**
+| Question | Concept | Loop Used | Key Logic |
+|----------|---------|----------|-----------|
+| **Q1** | Print name 5 times | For Loop | `console.log("Sambhav")` |
+| **Q2** | Print 1 to 10 | For Loop | `console.log(i)` |
+| **Q3** | Print 10 to 1 | For Loop | `console.log(i)` |
+| **Q4** | Print first 10 odd numbers | While Loop | `if(num % 2 != 0)` |
+| **Q5** | Print first 10 odd numbers (reverse) | While Loop | `2*i - 1` |
+| **Q6** | Print first 10 even numbers | While Loop | `if(num % 2 == 0)` |
+| **Q7** | Print first 10 even numbers (reverse) | While Loop | `i -= 2` |
+| **Q8** | Print squares of first 10 numbers | For Loop | `console.log(i * i)` |
+| **Q9** | Print cubes of first 10 numbers | For Loop | `console.log(i * i * i)` |
+| **Q10** | Print multiplication table of 5 | For Loop | `console.log(5 * i)` |
 
 ---
 
-## 💡 **Key Takeaways**  
-- Strengthened concepts of **if-else** conditions.
-- Practiced various logical checks for numbers, characters, and triangles.
-- Improved understanding of **JavaScript control flow**.
-
---- 
-
-Feel free to suggest or enhance the solutions! 🌟
+## 🚀 **Final Thoughts**
+- **For loops** are best when you know the number of iterations.  
+- **While loops** are useful when conditions determine the loop execution.  
+- **Mathematical formulas** (like `2*i - 1`) can optimize loops.
