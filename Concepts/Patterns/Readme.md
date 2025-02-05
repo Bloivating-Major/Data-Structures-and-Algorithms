@@ -27,6 +27,7 @@ Welcome to the **Pattern Generator** project! This repository contains a collect
   - [16. Hollow Inverted](#16-hollow-inverted)
   - [17. Square](#17-square)
   - [18. Hollow Square](#18-hollow-square)
+  - [19. Fancy Pattern 2](#19-fancy-pattern-2)
 
 ## 📝 Overview
 
@@ -636,6 +637,43 @@ function HollowSquare(num) {
  *           *
  *  *  *  *  *
 ```
+
+### 19. Fancy Pattern 2
+
+This Pattern generates Fancy Patttern
+
+```javascript
+function FancyPattern2(num){
+  let count = 1;
+  for(let i  =0; i < num; i++){
+    for(let j = 0; j <=i; j++ ){
+      process.stdout.write(`${count} `);
+      if(j < i) process.stdout.write(`* `)
+      count++;
+    }
+    console.log();
+  }
+  for(let i = 0; i < num; i++){
+    for(let j = 0; j < num - i; j++){
+      process.stdout.write(`${count - num + j} `);
+      if(j < num -  i - 1) process.stdout.write(`* `)
+    }
+    console.log();
+  }
+}
+```
+**Output for `FancyPattern2(4)`**:
+```
+1 
+2 * 3
+4 * 5 * 6
+7 * 8 * 9 * 10
+7 * 8 * 9 * 10
+7 * 8 * 9
+7 * 8
+7
+```
+
 
 ## 🌟 Conclusion
 
