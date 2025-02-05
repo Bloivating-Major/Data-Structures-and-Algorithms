@@ -5,6 +5,42 @@ let num = 5;
 // NumericPalindromicEquilateralPyramid(num)
 // SolidHalfDiamond(num);
 // FancyPattern(num);
+// FancyPattern2(num);
+// FancyPattern3(num)
+
+function FancyPattern3(num) {
+  for(let i = 0; i < num; i++){
+    let condition = i < num/2 ? 2 * i : 2 * (num - i - 1);
+    for(let j = 0; j <= condition; j++){
+      if(j <=condition/2){
+        process.stdout.write(`${j+1}`);
+      }
+      else{
+        process.stdout.write(`${condition-j+1}`);
+      }
+    }
+    console.log();
+  }
+}
+
+function FancyPattern2(num){
+  let count = 1;
+  for(let i  =0; i < num; i++){
+    for(let j = 0; j <=i; j++ ){
+      process.stdout.write(`${count} `);
+      if(j < i) process.stdout.write(`* `)
+      count++;
+    }
+    console.log();
+  }
+  for(let i = 0; i < num; i++){
+    for(let j = 0; j < num - i; j++){
+      process.stdout.write(`${count - num + j} `);
+      if(j < num -  i - 1) process.stdout.write(`* `)
+    }
+    console.log();
+  }
+}
 
 function FancyPattern(num){
   if(num > 9) {

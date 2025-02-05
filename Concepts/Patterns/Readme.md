@@ -674,6 +674,34 @@ function FancyPattern2(num){
 7
 ```
 
+### 20. Fancy Pattern 3
+
+This Pattern generates Fancy Patttern
+
+```javascript
+function FancyPattern3(num) {
+  for(let i = 0; i < num; i++){
+    let condition = i < num/2 ? 2 * i : 2 * (num - i - 1);
+    for(let j = 0; j <= condition; j++){
+      if(j <=condition/2){
+        process.stdout.write(`${j+1}`);
+      }
+      else{
+        process.stdout.write(`${condition-j+1}`);
+      }
+    }
+    console.log();
+  }
+}
+```
+**Output for `FancyPattern2(4)`**:
+```
+1
+121
+12321
+121
+1
+```
 
 ## 🌟 Conclusion
 
