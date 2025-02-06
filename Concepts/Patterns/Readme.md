@@ -28,6 +28,10 @@ Welcome to the **Pattern Generator** project! This repository contains a collect
   - [17. Square](#17-square)
   - [18. Hollow Square](#18-hollow-square)
   - [19. Fancy Pattern 2](#19-fancy-pattern-2)
+  - [20. Fancy Pattern 3](#20-fancy-pattern-3)
+  - [21. Floyd's Triangle](#21-floyd's-triangle)
+  - [22. Pascal Triangle](#22-pascal-triangle)
+  - [23. Butterfly Pattern](#23-butterfly-pattern)
 
 ## 📝 Overview
 
@@ -701,6 +705,123 @@ function FancyPattern3(num) {
 12321
 121
 1
+```
+
+### 21. Floyd's Triangle
+
+This Pattern generates Floyd's Triangle Pattern
+
+```javascript
+function FloydTriangle(num) {
+  let count = 1;
+  for(let i  = 0; i < num; i++){
+    for(let j = 0; j <= i; j++){
+      process.stdout.write(`${count} `);
+      count++;
+    }
+    console.log();
+  }
+}
+```
+**Output for `FloydTriangle(5)`**:
+```
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+```
+
+### 22. Floyd's Triangle
+
+This Pattern generates Floyd's Triangle Pattern
+
+```javascript
+function FloydTriangle(num) {
+  let count = 1;
+  for(let i  = 0; i < num; i++){
+    for(let j = 0; j <= i; j++){
+      process.stdout.write(`${count} `);
+      count++;
+    }
+    console.log();
+  }
+}
+```
+**Output for `FloydTriangle(5)`**:
+```
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+```
+
+### 22. Pascal Triangle
+
+This Pattern generates Pascal Triangle Pattern
+
+```javascript
+function PascalTriangle(num) {
+  for(let i = 1; i <= num; i++){
+    let c = 1;
+    for(let j = 0; j < num-i; j++){
+      process.stdout.write(" ");
+    }
+    for(let j = 1; j <= i; j++){
+      process.stdout.write(` ${c}`)
+      c = c * (i - j) / j;
+    }
+    console.log();
+  }
+}
+```
+**Output for `PascalTriangle(7)`**:
+```
+       1
+      1 1
+     1 2 1
+    1 3 3 1
+   1 4 6 4 1
+  1 5 10 10 5 1
+ 1 6 15 20 15 6 1 
+```
+
+### 23. Butterfly Pattern
+
+This Pattern generates Butterfly Pattern
+
+```javascript
+function ButterflyPattern(num) {
+  for(let i = 0; i < 2 * num; i++){
+    let condition = i < num ? i :  num + (num - i - 1);
+    let spaces = i < num ? 2 * (num - i - 1) : i - condition - 1;
+    for(let j = 0; j < 2 * num; j++){
+      if(j <= condition){
+        process.stdout.write(`* `);
+      }else if(spaces > 0){
+        process.stdout.write("  ");
+        spaces--;
+      }else {
+        process.stdout.write("* ");
+      }
+    }
+    console.log();
+  }
+}
+```
+**Output for `ButterflyPattern(5)`**:
+```
+*                 * 
+* *             * *
+* * *         * * *
+* * * *     * * * *
+* * * * * * * * * *
+* * * * * * * * * *
+* * * *     * * * *
+* * *         * * *
+* *             * *
+*                 * 
 ```
 
 ## 🌟 Conclusion

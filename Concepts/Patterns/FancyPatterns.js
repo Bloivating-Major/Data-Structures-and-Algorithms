@@ -7,6 +7,52 @@ let num = 5;
 // FancyPattern(num);
 // FancyPattern2(num);
 // FancyPattern3(num)
+// FloydTriangle(num)
+// PascalTriangle(num)
+ButterflyPattern(num);
+
+function ButterflyPattern(num) {
+  for(let i = 0; i < 2 * num; i++){
+    let condition = i < num ? i :  num + (num - i - 1);
+    let spaces = i < num ? 2 * (num - i - 1) : i - condition - 1;
+    for(let j = 0; j < 2 * num; j++){
+      if(j <= condition){
+        process.stdout.write(`* `);
+      }else if(spaces > 0){
+        process.stdout.write("  ");
+        spaces--;
+      }else {
+        process.stdout.write("* ");
+      }
+    }
+    console.log();
+  }
+}
+
+function PascalTriangle(num) {
+  for(let i = 1; i <= num; i++){
+    let c = 1;
+    for(let j = 0; j < num-i; j++){
+      process.stdout.write(" ");
+    }
+    for(let j = 1; j <= i; j++){
+      process.stdout.write(` ${c}`)
+      c = c * (i - j) / j;
+    }
+    console.log();
+  }
+}
+
+function FloydTriangle(num) {
+  let count = 1;
+  for(let i  = 0; i < num; i++){
+    for(let j = 0; j <= i; j++){
+      process.stdout.write(`${count} `);
+      count++;
+    }
+    console.log();
+  }
+}
 
 function FancyPattern3(num) {
   for(let i = 0; i < num; i++){
