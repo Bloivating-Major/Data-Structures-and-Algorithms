@@ -118,3 +118,41 @@
 //         }
 //     }
 // }
+
+// Sort 0's and 1's 
+
+// let arr = [0,1,1,0,1,0,1,0,0];
+// console.log(arr);
+// let index = 0, start = 0, end = arr.length-1;
+
+// while(index < end){
+//     if(arr[index] == 0){
+//         arr[start] = arr[index];
+//         start++;
+//         index++;
+//     }
+//     if(arr[index] == 1){
+//         temp = arr[end];
+//         arr[end] = arr[index];
+//         arr[index] = temp;
+//         end--;
+//     }
+// }
+// console.log(arr);
+
+// let arr = [0,1,1,0,1,0,1,0,0];
+// console.log(arr);
+// let start = 0, end = arr.length-1;
+
+// while(start < end){
+//     if(arr[start] == 0) start++;
+//     else if(arr[end] == 1) end--;
+//     else{
+//         let temp = arr[end];
+//         arr[end] = arr[start];
+//         arr[start] = temp;
+//         start++;
+//         end--;
+//     }
+// }
+// console.log(arr);

@@ -159,6 +159,53 @@ for (let i = 0; i < arr.length; i++) {
 }
 ```
 
+## Sort 0's and 1's in an Array 🔄
+
+To sort 0's and 1's in an array using 3 pointers and 2 pointers approach : 
+
+```javascript
+let arr = [0,1,1,0,1,0,1,0,0];
+console.log("Before Sorting : " + arr);
+let index = 0, start = 0, end = arr.length-1;
+
+while(index < end){
+    if(arr[index] == 0){
+        arr[start] = arr[index];
+        start++;
+        index++;
+    }
+    if(arr[index] == 1){
+        temp = arr[end];
+        arr[end] = arr[index];
+        arr[index] = temp;
+        end--;
+    }
+}
+console.log("After Sorting : " + arr); 
+//[0, 0, 0, 0, 0, 1, 1, 1, 1]
+```
+Sorting with 2 pointers only : 
+
+```javascript
+let arr = [0,1,1,0,1,0,1,0,0];
+console.log("Before Sorting : " + arr);
+let start = 0, end = arr.length-1;
+
+while(start < end){
+    if(arr[start] == 0) start++;
+    else if(arr[end] == 1) end--;
+    else{
+        let temp = arr[end];
+        arr[end] = arr[start];
+        arr[start] = temp;
+        start++;
+        end--;
+    }
+}
+console.log("After Sorting : " + arr);
+//[0, 0, 0, 0, 0, 1, 1, 1, 1]
+```
+
 ## Conclusion 🎉
 
 In this session, we explored advanced operations on arrays, including finding unique elements, performing unions and intersections, and calculating pair sums. These techniques are essential for manipulating and analyzing data effectively in JavaScript. Keep practicing, and happy coding! 💻✨
