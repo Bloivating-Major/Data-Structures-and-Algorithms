@@ -299,7 +299,7 @@ function Question26(){
     // Fibonacci Series
     let prev = 0, current = 1;
     let str = "0 1 "
-    let num = 2;
+    let num = 8;
     let count = 2;
     while(count <= num){
         let temp = current;
@@ -314,7 +314,7 @@ function Question26(){
         console.log(current+ " ");
     }else  console.log(str);
 }
-// Question26()
+Question26()
 function Question27(){
     // Repeat hello until user gives worng input using do while loop
     let userInput = null;
@@ -446,11 +446,71 @@ function Question35(){
         console.log();
     }
 }
-Question35()
-function Question36(){}
-// Question01()
-function Question37(){}
-// Question01()
+// Question35()
+function Question36(){
+    let num = 5;
+    for(let i = 1; i <=num; i++){
+        for(let j = 1; j <= 2 * num - 1; j++){
+            //      1  2  3  4  5   6   7   8   9     
+            // 1   *                                 *    i = 1  j = 1, 9 
+            // 2       *                        *         i = 2  j = 2, 8 
+            // 3           *                *             i = 3  j = 3, 7 
+            // 4               *       *                  i = 4  j = 4, 6
+            // 5                   *                      i = 5  j = 5, 5  
+            if(j <= num){
+                if(j == i) process.stdout.write('* ')
+                else process.stdout.write('  ');
+            }
+            else {
+                if(j == 2*num-i) process.stdout.write('*  ')
+                else process.stdout.write('  ');
+            }
+        }
+        console.log();
+    }
+}
+// Question36()
+function Question37(){
+    let num = 9;
+    for(let i = 1; i <= 2 * num - 1; i++){
+        for(let j = 1; j <= 2 * num - 1; j++){
+            //      1  2  3  4  5   6   7   8   9     
+            // 1   *                                 *    i = 1  j = 1, 9 
+            // 2       *                        *         i = 2  j = 2, 8 
+            // 3           *                *             i = 3  j = 3, 7 
+            // 4               *       *                  i = 4  j = 4, 6
+            // 5                   *                      i = 5  j = 5, 5  
+            // 6               *       *                 i = 6  j  = 4, 6   
+            // 7           *                 *          i = 7   j  = 3, 7  
+            // 8       *                        *       i = 8   j = 2, 8
+            // 9   *                                 *  i = 9 j = 1, 9
+            if(i <= num) {
+            if(j <= num){
+                if(j == i) process.stdout.write('* ')
+                else process.stdout.write('  ');
+            }
+            else {
+                if(j == 2*num-i) process.stdout.write('*  ')
+                else process.stdout.write('  ');
+            }
+        }else{
+            if(j <= num){
+                if(j == num-(i - num)) {
+                 process.stdout.write('* ')
+                }    
+
+                else process.stdout.write('  ');
+            }
+            else {
+                if(j == num+(i-num)) process.stdout.write('*  ')
+                else process.stdout.write('  ');
+            }
+        }
+        }
+        console.log();
+    }
+}
+// Question37()
 function Question38(){}
 // Question01()
 function Question39(){}
