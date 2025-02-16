@@ -4,4 +4,5 @@
 
 - 🔧 [**Session 1 Basics Notes**](./Theory/Session1Notes.md)
 - 🔧 [**Session 2 Intermeddiate Notes**](./Theory/Session2Notes.md)
-- 🔮 [**Challenges**](./Questions/script.js)
+- 🔧 [**Session 3 Advanced Notes**](./Theory/Session3Notes.md)
+- 🔮 [**Challenges**](./Questions/Readme.md)
