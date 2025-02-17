@@ -2,6 +2,8 @@
 
 This document contains 14 basic JavaScript questions that cover fundamental concepts like input/output, conditionals, and operators. Each question includes the code implementation and a short description.
 
+[⬅️ Go Back](./Readme.md)
+
 ---
 
 ## Table of Contents
