@@ -4,15 +4,30 @@ let target = 15;
 let leetcode34 = [5,7,7,8,8,10];
 let leetcode34Target = 8;
 
+let infiniteArr = [3, 5, 7, 9, 10, 90,
+    100, 130, 140, 160, 170];
+let targetInfinite = 10;
+
+
 let ans;
 
 // ans = BinarySearch(arr,target);
 // ans = CeilingOfNumber(arr,target);
 // ans = FloorOfNumber(arr, target);
-ans = searchRange(leetcode34, leetcode34Target);
+// ans = searchRange(leetcode34, leetcode34Target);
+ans = InfiniteArraySearch(infiniteArr, targetInfinite)
 
 console.log(ans);
 
+function InfiniteArraySearch(arr, target){
+    let start = 0, end = 1;
+    while(target >arr[end]){
+        let newStart = end + 1;
+        end = end + ((end - start +1)*2);
+        start = newStart;
+    }
+    return BinarySearch(arr, target, start, end);
+}
 
 function searchRange(nums, target) {
     let ans = [-1,-1];
@@ -79,14 +94,12 @@ function CeilingOfNumber(arr, target){
     return start; // If Array Doesn't have that element then return ans as start.
 }
 
-function BinarySearch(arr, target){
-    let start = 0, end = arr.length-1;
-    let ans = -1;
+function BinarySearch(arr, target, start, end){
     while(start<=end){
         let mid = Math.floor(start + (end - start) / 2);
-        if(arr[mid] == target) return ans = mid;
+        if(arr[mid] == target) return mid;
         else if(arr[mid] > target) end = mid - 1;
         else start = mid + 1;
     }
-    return ans;
+    return -1;
 }
