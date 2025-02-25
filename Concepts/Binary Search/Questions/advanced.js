@@ -8,6 +8,7 @@ let infiniteArr = [3, 5, 7, 9, 10, 90,
     100, 130, 140, 160, 170];
 let targetInfinite = 10;
 
+let peakElemArr = [1,2,1,3,5,6,4]
 
 let ans;
 
@@ -15,9 +16,21 @@ let ans;
 // ans = CeilingOfNumber(arr,target);
 // ans = FloorOfNumber(arr, target);
 // ans = searchRange(leetcode34, leetcode34Target);
-ans = InfiniteArraySearch(infiniteArr, targetInfinite)
+// ans = InfiniteArraySearch(infiniteArr, targetInfinite)
+ans = findPeakElement(peakElemArr);
 
 console.log(ans);
+
+
+function findPeakElement(arr) {
+    let start = 0, end = arr.length - 1;
+    while (start < end) {
+        let mid = Math.floor(start + (end - start) / 2);
+        if (arr[mid] < arr[mid + 1]) start = mid + 1;
+        else end = mid;
+    }
+    return start;
+};
 
 function InfiniteArraySearch(arr, target){
     let start = 0, end = 1;
