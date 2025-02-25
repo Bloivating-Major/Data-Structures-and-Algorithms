@@ -1,13 +1,46 @@
 let arr = [2,3,5,9,14,16,18];
 let target = 15;
 
+let leetcode34 = [5,7,7,8,8,10];
+let leetcode34Target = 8;
+
 let ans;
 
 // ans = BinarySearch(arr,target);
 // ans = CeilingOfNumber(arr,target);
 // ans = FloorOfNumber(arr, target);
+ans = searchRange(leetcode34, leetcode34Target);
 
 console.log(ans);
+
+
+function searchRange(nums, target) {
+    let ans = [-1,-1];
+    ans[0] = search(nums, target, true);
+    if(ans[0] != -1){
+        ans[1] = search(nums, target, false);
+    }
+    return ans;
+};
+
+function search(arr,target, firstIndex){
+    let ans = -1;
+    let start = 0;
+    let end = arr.length-1;
+    while(start<=end){
+        let mid = Math.floor(start + (end-start) / 2);
+
+        if(arr[mid] > target) end = mid - 1;
+        else if(arr[mid] < target) start = mid + 1;
+        else {
+            ans = mid;
+            if(firstIndex) end = mid - 1;
+            else start = mid + 1;
+        }
+    }
+    return ans
+}
+
 
 function FloorOfNumber(arr, target){
 
