@@ -594,31 +594,31 @@ function Question44() {
 
   let arr = [1, 2, 3, 4, 5];
   let k = 3;
-  k =  k % arr.length;
+  k = k % arr.length;
 
   // Left Rotation by K Elements
   // Step 1 : Reverse First K Elements
   // Step 2 : Reverse Remaining Elements from K to Length
   // Step 3 : Reverse Full Array
-  if(k == 0) console.log(arr);
+  if (k == 0) console.log(arr);
   else {
-  arr = Reverse(arr, 0, k-1)
-  arr = Reverse(arr, k , arr.length-1);
-  arr = Reverse(arr, 0, arr.length-1)
-  console.log(arr);
+    arr = Reverse(arr, 0, k - 1);
+    arr = Reverse(arr, k, arr.length - 1);
+    arr = Reverse(arr, 0, arr.length - 1);
+    console.log(arr);
   }
 
-    // Right Rotation by K Elements
-    // Step 1 : Reverse Entire Array
-    // Step 2 : Reverse First K Elements
-    // Step 3 : Reverse Remaining Elements from K to Length
-    // if(k == 0) console.log(arr);
-    // else {
-    //     arr = Reverse(arr, 0, arr.length-1);
-    //     arr = Reverse(arr, 0, k-1);
-    //     arr = Reverse(arr, k, arr.length-1)
-    //     console.log(arr);
-    // }
+  // Right Rotation by K Elements
+  // Step 1 : Reverse Entire Array
+  // Step 2 : Reverse First K Elements
+  // Step 3 : Reverse Remaining Elements from K to Length
+  // if(k == 0) console.log(arr);
+  // else {
+  //     arr = Reverse(arr, 0, arr.length-1);
+  //     arr = Reverse(arr, 0, k-1);
+  //     arr = Reverse(arr, k, arr.length-1)
+  //     console.log(arr);
+  // }
 }
 function Reverse(arr, initial, kthIndex) {
   let i = initial,
@@ -633,23 +633,92 @@ function Reverse(arr, initial, kthIndex) {
 }
 // Question44();
 function Question45() {
-    // Linear Search
-    let arr = [1,2,3,4,5], key = 4, isFound = false;
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] == key) isFound = true; 
-    }
-    if(isFound) console.log("Found");
-    else console.log(("Not Found"));
+  // Linear Search
+  let arr = [1, 2, 3, 4, 5],
+    key = 4,
+    isFound = false;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == key) isFound = true;
+  }
+  if (isFound) console.log("Found");
+  else console.log("Not Found");
 }
 // Question45()
-function Question46() {}
-// Question01()
-function Question47() {}
-// Question01()
-function Question48() {}
-// Question01()
-function Question49() {}
-// Question01()
+function Question46() {
+  // Binary Search
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  let key = 5;
+  let start = 0;
+  let end = arr.length - 1;
+  while (start <= end) {
+    let mid = Math.floor((start + end) / 2);
+    if (arr[mid] == key) {
+      console.log("Element Found " + mid);
+      return mid;
+    }
+    else if (arr[mid] < key) start = mid + 1;
+    else end = mid - 1;
+  }
+  console.log("Element Not Found"); // If the element is not found in the array
+  return -1; // Not Found
+}
+// Question46()
+function Question47() {
+  // Bubble Sort
+  // Compare elem with its adjacent elem
+  let arr = [64, 34, 25, 12, 22, 11, 90];
+  let n = arr.length;
+  console.log(arr);
+
+  for(let i = 0; i < n - 1; i++){
+    for(let j = 0 ; j < n - 1 - i; j++){
+      if(arr[j] > arr[j+1]){
+        let temp = arr[j];
+        arr[j] = arr[j+1];
+        arr[j+1] = temp;
+      }
+    }
+  }
+
+  console.log(arr);
+}
+// Question47()
+function Question48() {
+  // Insertion Sort
+  let arr = [64, 34, 25, 12, 22, 11, 90];
+  let n = arr.length;
+  console.log(arr);
+  for(let i = 1; i < n; i++){
+    let current = arr[i];
+    let previous = i - 1;
+    while(previous >= 0 && arr[previous] > current){
+      arr[previous + 1] = arr[previous];
+      previous--;
+    }
+    arr[previous + 1] = current;
+  }
+  console.log(arr);
+}
+// Question48()
+function Question49() {
+  // Selection Sort
+  let arr = [64, 34, 25, 12, 22, 11, 90];
+  let n = arr.length;
+  console.log(arr);
+  for(let i = 0; i < n; i++){
+    let min = i; // Current index as min
+    for(let j = i + 1; j < n; j++){
+      if(arr[j] < arr[min]) min = j;
+    }
+    if(min != i){
+      let temp = arr[i];
+      arr[i] = arr[min];
+      arr[min] = temp;
+    }
+  }
+  console.log(arr);
+}
+// Question49()
 function Question50() {}
 // Question01()
 function Question51() {}
