@@ -46,12 +46,12 @@ The objective of this repository is to:
 
 ## **Table of Contents**
 1. [Introduction to DSA](#introduction-to-dsa)
-2. [Array](#array)
+2. [Array](./Concepts/Array/Readme.md)
 3. [Linked List](#linked-list)
 4. [Stacks and Queues](#stacks-and-queues)
 5. [Trees](#trees)
 6. [Graphs](#graphs)
-7. [Sorting and Searching](#sorting-and-searching)
+7. [Sorting and Searching](./Sorting%20and%20Searching/Readme.md)
 8. [Dynamic Programming](#dynamic-programming)
 9. [Greedy Algorithms](#greedy-algorithms)
 10. [Recursion and Backtracking](#recursion-and-backtracking)
